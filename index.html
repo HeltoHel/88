@@ -4,6 +4,153 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop</title>
+       <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #main {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        #main:hover {
+            transform: translateY(-5px);
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            font-weight: 700;
+            background: linear-gradient(45deg, #3498db, #2c3e50);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        img {
+            width: 150px;
+            height: 150px;
+            margin: 20px auto;
+            display: block;
+            filter: drop-shadow(0 5px 15px rgba(52, 152, 219, 0.3));
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        p {
+            color: #7f8c8d;
+            line-height: 1.6;
+            margin: 25px 0;
+            font-size: 1.1em;
+            padding: 0 10px;
+        }
+
+        #buy {
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            color: white;
+            border: none;
+            padding: 18px 40px;
+            font-size: 1.1em;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+            letter-spacing: 0.5px;
+            margin-top: 10px;
+            width: 100%;
+            max-width: 250px;
+        }
+
+        #buy:hover {
+            background: linear-gradient(45deg, #2980b9, #3498db);
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(52, 152, 219, 0.5);
+        }
+
+        #buy:active {
+            transform: scale(0.98);
+        }
+
+        #buy:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
+        }
+
+        /* Адаптивность */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            
+            #main {
+                padding: 30px 20px;
+                margin: 10px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            img {
+                width: 120px;
+                height: 120px;
+            }
+            
+            #buy {
+                padding: 16px 30px;
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 400px) {
+            h1 {
+                font-size: 1.7em;
+            }
+            
+            p {
+                font-size: 1em;
+            }
+        }
+
+        /* Дополнительные декоративные элементы */
+        #main::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #3498db, #2c3e50, #3498db);
+            border-radius: 22px;
+            z-index: -1;
+            opacity: 0.1;
+        }
+    </style>
 </head>
 <body>
 <div id="main">
@@ -14,4 +161,5 @@
 </div>
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </body>
+
 </html>
